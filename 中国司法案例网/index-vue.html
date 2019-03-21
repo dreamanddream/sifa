@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国司法案例网</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="fd-container" id="fd-app">
+    <!--头部-->
+    <header class="fd-header-top">
+        <div class="fd-common-width fd-clearfix">
+            <p class="fd-header-top-title fd-fl">您好，欢迎来到全国司法案例公开平台！</p>
+            <p class="fd-header-top-login fd-fr"><a href="javascript:void(0);">登录</a></p>
+        </div>
+    </header>
+    <!--头部导航-->
+    <nav class="fd-nav">
+        <div class="fd-navs-wrap">
+            <div class="fd-common-width fd-nav-wrap">
+                <form action="" class="fd-nav-form fd-fr">
+                    <input type="text" class="fd-search" placeholder="请输入关键词">
+                </form>
+                <ul class="fd-nav-ul fd-clearfix">
+                    <li class="fd-nav-li"><a href="javascript:void(0);">首页</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">研究动态</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">研究院概况</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">案例研究</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">大法官审案</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">法官说案</a></li>
+                    <li class="fd-nav-li active"><a href="javascript:void(0);">案例评选</a></li>
+                    <li class="fd-nav-li"><a href="javascript:void(0);">案例库</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="fd-container fd-common-width">
+        <p class="fd-bread"><a href="javascript:void(0);">首页</a><span class="fd-arrow">&gt;</span><a href="javascript:void(0);">案例精选</a></p>
+        <div class="fd-container-wrap fd-clearfix">
+            <div class="fd-container-left fd-fl">
+                <div class="fd-moren">
+                    <div class="fd-moren-title fd-fr">
+                        <span class="fd-moren-mr active">默认</span>|
+                        <span class="fd-moren-zx">最新</span>
+                    </div>
+                </div>
+                <div class="fd-anli-list" v-for="(item, index) in anliList" :key="index">
+                    <div class="fd-anli-left fd-fl active">
+                        <p class="fd-anli-number" v-text="item.id"></p>
+                    </div>
+                    <div class="fd-anli-middle fd-fl">
+                        <div class="fd-anli-list-top">
+                            <span class="fd-anli-tag">[案例]</span>
+                            <span class="fd-anli-description" v-text="item.anliDetail"></span>
+                        </div>
+                        <div class="fd-anli-list-bottom fd-clearfix">
+                            <div class="fd-anli-tag fd-fl">【推荐理由】</div>
+                            <div class="fd-anli-description fd-fl" v-text="item.anliYou"></div>
+                        </div>
+                    </div>
+                    <div class="fd-anli-right fd-fl">
+                        <span class="fd-anli-zong">总</span>
+                        <p class="fd-anli-right-number">{{item.touNumber}}</p>
+                        <div class="fd-anli-btn">我要投票</div>
+                    </div>
+                </div>
+                <!--案例分页-->
+                <ul class="fd-anli-page fd-clearfix">
+                    <li><a href="javascript:void(0);">首页</a></li>
+                    <li><a href="javascript:void(0);">上一页</a></li>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li class="active"><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                    <li><a href="javascript:void(0);">6</a></li>
+                    <li><a href="javascript:void(0);">7</a></li>
+                    <li><a href="javascript:void(0);">...</a></li>
+                    <li><a href="javascript:void(0);">下一页</a></li>
+                    <li><a href="javascript:void(0);">末页</a></li>
+                </ul>
+            </div>
+            <div class="fd-container-right fd-fr">
+                <div class="fd-zxrk-title">
+                    <span class="fd-zxrk-zx">最新</span><span class="fd-zxrk-rk">入库</span><img src="./images/index-anli-right.png" alt="">
+                    <div class="fd-zxrk-list fd-clearfix" v-for="(item, index) in libList" :key="index" :class="item.id<4?'active':''">
+                        <span class="fd-zxrk-num fd-fl" v-text="item.id"></span>
+                        <div class="fd-zxrk-des fd-fr">
+                            <span class="fd-zxrk-detail">{{item.libDetail}}<span class="fd-zxrk-read fd-fr"><i>{{item.readNum}}</i><i>阅读</i></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="fd-footer-nav">
+            <ul class="fd-clearfix">
+                <li><a href="javascript:void(0);">中国共产党新闻网</a></li>
+                <li><a href="javascript:void(0);">中国政府网</a></li>
+                <li><a href="javascript:void(0);">中国人大网</a></li>
+                <li><a href="javascript:void(0);">中国政协网</a></li>
+                <li><a href="javascript:void(0);">中国法院网</a></li>
+                <li><a href="javascript:void(0);">最高人民检查院</a></li>
+            </ul>
+        </div>
+        <!-- fd-footer-nav 底部超链接-->
+        <div class="fd-footer-nav1">
+            <ul class="fd-clearfix">
+                <li><a href="javascript:void(0);">人民法院知识产权审判网</a></li>
+                <li><a href="javascript:void(0);">人民法院诉讼资产网</a></li>
+                <li><a href="javascript:void(0);">中国知识产权裁判文书网</a></li>
+                <li><a href="javascript:void(0);">中央国家机关理论武装在线</a></li>
+            </ul>
+        </div>
+        <!-- fd-footer-nav1 底部超链接-->
+        <div class="fd-footer-nav2">
+            <span>地址 : 北京市东城区东交民巷27号</span>
+            <span>邮编 : 100745</span>
+            <span>总机 : 67550114</span>
+            <span>举报电话 : 67556131</span>
+        </div>
+        <!-- fd-footer-nav2 底部超链接-->
+        <p class="fd-footer-top">中华人民共和国最高人民法院 版权所有</p>
+
+        <p class="fd-footer-down">京ICP备05023036号</p>
+    </footer>
+</div>
+<script src="./js/jQuery.v1.11.1.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/*案例左侧*/
+.fd-bread {
+    padding: 10px 0;
+    color: #454545;
+    font-size: 14px;
+}
+.fd-arrow {
+    display: inline-block;
+    width: 12px;
+    margin: 0 5px;
+}
+.fd-container-left {
+    width: 915px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.fd-moren {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #fff5d9;
+    border: 1px solid #fff5d9;
+}
+.fd-moren-title span {
+    cursor: pointer;
+}
+.fd-moren-title .active{
+    color: #e51b1f;
+}
+.fd-moren-title span:hover {
+    color: #e51b1f;
+}
+.fd-moren-mr {
+    margin-right: 22px;
+}
+.fd-moren-zx {
+    margin-left: 22px;
+    padding-right: 30px;
+}
+.fd-anli-left.active .fd-anli-number{
+    color: #e51b1f;
+}
+.fd-anli-list {
+    margin: 0 auto;
+    padding: 28px 0px 22px;
+    width: 865px;
+    height: 108px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.fd-anli-list-top {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.fd-anli-list-top .fd-anli-description {
+    font-size: 16px;
+    font-weight: bold;
+}
+.fd-anli-list-top .fd-anli-tag{
+    color: #2c5a99;
+    font-weight: bold;
+}
+.fd-anli-middle {
+    width: 585px;
+}
+.fd-anli-number {
+    width: 124px;
+    line-height: 108px;
+    text-align: center;
+    color: #2c5a99;
+    font-size: 50px;
+    border-right: 1px solid #e6e6e6;
+}
+.fd-anli-middle {
+    margin-left: 20px;
+}
+.fd-anli-description {
+    color: #4d4d4d;
+    font-size: 14px;
+}
+.fd-anli-list-bottom .fd-anli-description{
+    width: 480px;
+}
+.fd-anli-list-bottom .fd-anli-tag {
+    width: 90px;
+    font-size: 14px;
+    text-align: left;
+}
+.fd-anli-list-bottom .fd-anli-tag {
+    color: #c6393c;
+}
+.fd-anli-right {
+    position: relative;
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+}
+.fd-anli-right-number {
+    margin-top: 30px;
+    color: #e51b1f;
+    font-size: 28px;
+    font-weight: bold;
+}
+.fd-anli-zong {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #ecad00;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.fd-anli-btn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: #e2494c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/*分页*/
+.fd-anli-page {
+    padding: 30px 0;
+    margin: 0 auto;
+    width: 550px;
+}
+.fd-anli-page li {
+    float: left;
+    margin-right: 15px;
+}
+.fd-anli-page li.active a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #e24e4e;
+}
+.fd-anli-page a{
+    color: #4c4c4c;
+    font-size: 14px;
+    text-align: center;
+}
+/*案例右侧*/
+.fd-container-right {
+    padding: 0 14px;
+    width: 232px;
+    border: 1px solid #d8e1e8;
+}
+.fd-zxrk-title {
+    margin-top: 14px;
+}
+.fd-zxrk-title span {
+    font-size: 16px;
+}
+.fd-zxrk-zx {
+    color: #cd1716;
+}
+.fd-zxrk-rk {
+    color: #4e6894;
+}
+.fd-zxrk-list {
+    padding: 15px 0;
+    border-bottom: 1px dotted #e6e6e6;
+}
+.fd-zxrk-list:last-child {
+    border-bottom: none;
+}
+.fd-zxrk-list.active .fd-zxrk-num {
+    background: #e2494c;
+}
+.fd-zxrk-list .fd-zxrk-num {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: #4e6894;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.fd-zxrk-des {
+    width: 205px;
+}
+.fd-zxrk-des .fd-zxrk-detail {
+    display: inline-block;
+    width: 196px;
+    font-size: 14px;
+}
+.fd-zxrk-read i{
+    font-size: 12px;
+}
+.fd-zxrk-des i:first-child {
+    color: #e2494c;
+}
+.fd-zxrk-read i:last-child {
+    color: #dedfdf;
+}
+
+
